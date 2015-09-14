@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="emdk-component">
+  <name>EMDK For Xamarin</name>
+  <publisher>Zebra</publisher>
+  <publisher-url>http://www.zebra.com</publisher-url>
+  <docs-url>http://emdk.github.io/docs/edge/</docs-url>
+  <version>0.0.3</version>
+  <summary>The EMDK for Xamarin will allow you to use Zebra Technolgies Android device capabilities using Xamarin C-Sharp APIs</summary>
+  <samples>
+    <sample id="ProfileDataCaptureSample1">
+      <name>Profile Data Capture</name>
+      <summary>Profile Data Capture</summary>
+    </sample>
+    <sample id="BarcodeSample1">
+      <name>Barcode APIs</name>
+      <summary>Barcode APIs</summary>
+    </sample>
+  </samples>
+</component>
