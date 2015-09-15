@@ -5,7 +5,7 @@
     <parm name="created_wizard_version" value="3.1.20"/>
   </characteristic>
   <characteristic type="Profile">
-    <parm name="ProfileName" value="Barcode_01"/>
+    <parm name="ProfileName" value="Barcode_1"/>
     <parm name="ModifiedDate" value="2015-09-10 14:09:02"/>
     <parm name="TargetSystemVersion" value="4.4"/>
 
