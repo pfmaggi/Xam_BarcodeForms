@@ -14,8 +14,8 @@ namespace BarcodeForms.Droid
     public class BarcodeScanner : IScanner
     {
         // Let's define the API intent strings for the soft scan trigger
-        private static String ACTION_SOFTSCANTRIGGER = "com.motorolasolutions.emdk.datawedge.api.ACTION_SOFTSCANTRIGGER";
-        private static String EXTRA_PARAM = "com.motorolasolutions.emdk.datawedge.api.EXTRA_PARAMETER";
+		private static String ACTION_SOFTSCANTRIGGER = "com.motorolasolutions.emdk.datawedge.api.ACTION_SOFTSCANTRIGGER";
+		private static String EXTRA_PARAM = "com.motorolasolutions.emdk.datawedge.api.EXTRA_PARAMETER";
         private static String DWAPI_TOGGLE_SCANNING = "TOGGLE_SCANNING";
         
         public void Scan()

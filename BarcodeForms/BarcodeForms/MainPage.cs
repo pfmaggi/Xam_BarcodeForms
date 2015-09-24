@@ -27,7 +27,7 @@ namespace BarcodeForms
 
             panel.Children.Add(new Label
             {
-                Text = "Enter a Phoneword:",
+                Text = "Scan a Barcode:",
             });
 
             panel.Children.Add(txtBarcode = new Entry
@@ -43,6 +43,10 @@ namespace BarcodeForms
             btnScan.Clicked += OnScan;
 
             this.Content = panel;
+
+			MessagingCenter.Subscribe<App, string> (this, "ScanBarcode", (sender, arg) => {
+				txtBarcode.Text = arg;
+			});
         }
 
         void OnScan(object sender, System.EventArgs e)

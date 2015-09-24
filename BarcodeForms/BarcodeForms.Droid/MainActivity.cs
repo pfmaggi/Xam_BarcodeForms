@@ -10,6 +10,8 @@ using Android.OS;
 using Symbol.XamarinEMDK;
 using System.Xml;
 using System.IO;
+using Android.Content;
+using Xamarin.Forms;
 
 namespace BarcodeForms.Droid
 {
@@ -35,8 +37,29 @@ namespace BarcodeForms.Droid
             {
                 Toast.MakeText(this, "EMDK Manager is available", ToastLength.Long).Show();
             }
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+
+
+			ScanReceiver _broadcastReceiver = new ScanReceiver();
+
+			//EditText editText = FindViewById<EditText>(Resource.Id.editbox);
+
+			global::Xamarin.Forms.Forms.Init(this, bundle);
+			var my_application = new App ();
+			_broadcastReceiver.scanDataReceived += (s, scanData) =>
+			{
+			//	editText.Text = scanData;
+				//Toast.MakeText(this, scanData, ToastLength.Long).Show();
+				//MessagingCenter.Send<BarcodeForms.MainPage, string> (this, "ScanBarcode", scanData);
+				MessagingCenter.Send<App, string> (my_application, "ScanBarcode", scanData);
+					
+			};
+
+			// Register the broadcast receiver
+			IntentFilter filter = new IntentFilter(ScanReceiver.IntentAction);
+			filter.AddCategory(ScanReceiver.IntentCategory);
+			Android.App.Application.Context.RegisterReceiver(_broadcastReceiver, filter);
+
+			LoadApplication(my_application);
         }
 
         protected override void OnDestroy()
