@@ -41,15 +41,10 @@ namespace BarcodeForms.Droid
 
 			ScanReceiver _broadcastReceiver = new ScanReceiver();
 
-			//EditText editText = FindViewById<EditText>(Resource.Id.editbox);
-
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 			var my_application = new App ();
 			_broadcastReceiver.scanDataReceived += (s, scanData) =>
 			{
-			//	editText.Text = scanData;
-				//Toast.MakeText(this, scanData, ToastLength.Long).Show();
-				//MessagingCenter.Send<BarcodeForms.MainPage, string> (this, "ScanBarcode", scanData);
 				MessagingCenter.Send<App, string> (my_application, "ScanBarcode", scanData);
 					
 			};
