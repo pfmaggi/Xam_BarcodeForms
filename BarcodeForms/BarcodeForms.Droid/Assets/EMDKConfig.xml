@@ -36,7 +36,7 @@
         <parm name="decoder_gs1_databar_exp" value="false"/>
         <parm name="decoder_datamatrix" value="false"/>
         <parm name="decoder_qrcode" value="false"/>
-        <parm name="decoder_pdf417" value="false"/>
+        <parm name="decoder_pdf417" value="true"/>
         <parm name="decoder_composite_ab" value="false"/>
         <parm name="decoder_composite_c" value="false"/>
         <parm name="decoder_microqr" value="false"/>

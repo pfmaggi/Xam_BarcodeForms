@@ -64,7 +64,8 @@ namespace BarcodeForms.Droid
 						}
 
 						// let's construct the beginning of our output string  
-						Out = "Scanner  " + "Symbology: " + sLabelType + ", Length: " + data_len.ToString () + ", Data: " + data.ToString () + "\r\n";
+						// Out = "Scanner  " + "Symbology: " + sLabelType + ", Length: " + data_len.ToString () + ", Data: " + data.ToString () + "\r\n";
+						Out = "Scanner Data: " + data.ToString() + "\r\n";
 					}
 				}
 				// check if the data has come from the MSR  
